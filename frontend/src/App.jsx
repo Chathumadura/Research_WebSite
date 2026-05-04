@@ -310,22 +310,6 @@ export default function App() {
 
 
         <section id="team" className="section content-section">
-          <div className="section-intro narrow-center">
-            <p className="section-kicker">Team</p>
-            <h3>Project Members</h3>
-          </div>
-          <div className="grid team-grid">
-            {team.map((member) => (
-              <article className="person-card" key={member.email}>
-                <img src={member.image} alt={member.name} />
-                <h4>{member.name}</h4>
-                <span className={member.role === 'Group Leader' ? 'role role-leader' : 'role'}>{member.role}</span>
-                <p>Faculty of Computing<br />Sri Lanka Institute of Information Technology<br />Malabe, Sri Lanka</p>
-                <a href={`mailto:${member.email}`}>{member.email}</a>
-              </article>
-            ))}
-          </div>
-
           <div className="section-intro narrow-center supervisor-intro">
             <p className="section-kicker">Supervisors</p>
             <h3>Academic Guidance</h3>
@@ -340,6 +324,22 @@ export default function App() {
                   <p>Faculty of Computing<br />Sri Lanka Institute of Information Technology<br />Malabe, Sri Lanka</p>
                   <a href={`mailto:${person.email}`}>{person.email}</a>
                 </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="section-intro narrow-center">
+            <p className="section-kicker">Team</p>
+            <h3>Project Members</h3>
+          </div>
+          <div className="grid team-grid">
+            {team.map((member) => (
+              <article className="person-card" key={member.email}>
+                <img src={member.image} alt={member.name} />
+                <h4>{member.name}</h4>
+                <span className={member.role === 'Group Leader' ? 'role role-leader' : 'role'}>{member.role}</span>
+                <p>Faculty of Computing<br />Sri Lanka Institute of Information Technology<br />Malabe, Sri Lanka</p>
+                <a href={`mailto:${member.email}`}>{member.email}</a>
               </article>
             ))}
           </div>
